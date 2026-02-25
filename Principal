@@ -1,0 +1,27 @@
+public class Principal {
+
+    public static void main(String[] args) {
+
+        metodos m = new metodos();
+
+        objProducto[] tienda1 = {
+            new objProducto("Manzana", 1.5, 10),
+            new objProducto("Pan", 2.0, 5),
+            new objProducto("Leche", 3.0, 8)//.
+        };
+
+        objProducto[] tienda2 = {
+            new objProducto("Pan", 2.0, 3),
+            new objProducto("Leche", 3.0, 2),
+            new objProducto("Banana", 1.2, 15)
+        };
+
+        objProducto[] fusionado = m.fusionarInventarios(tienda1, tienda2);
+
+        System.out.println("Inventario fusionado:");
+
+        for (int i = 0; i < fusionado.length; i++) {
+            System.out.println(fusionado[i]);
+        }
+    }
+}
